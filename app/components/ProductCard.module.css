@@ -1,0 +1,5 @@
+/* in module.css I cant use - in name since I have to follow JS property name convenyion- intead use camelCase */
+.card {
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
