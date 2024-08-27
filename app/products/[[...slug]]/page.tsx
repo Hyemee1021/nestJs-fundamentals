@@ -1,19 +1,20 @@
+import UserTable from "@/app/users/UserTable";
 import React from "react";
 
 interface Props {
   params: { slug: string[] };
   searchParams: {
-    sortOrder: string;
+    sortOrder?: string;
   };
 }
 
 const ProductPage = ({
   params: { slug },
-  searchParams: { sortOrder },
+  searchParams: { sortOrder = "default" },
 }: Props) => {
   return (
     <div>
-      ProductPage {slug} - {sortOrder}
+      ProductPage {slug.join("/")} - sortOrer: {sortOrder}
     </div>
   );
 };

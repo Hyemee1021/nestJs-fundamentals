@@ -16,7 +16,9 @@ const UserTable = async ({ sortOrder }: Props) => {
     cache: "no-store",
   });
   //will request the fetch if data has changed in 10s
-
+  if (!res.ok) {
+    throw new Error("Failed to fetch users");
+  }
   const users: User[] = await res.json();
 
   const sortUser = sort(users).asc(

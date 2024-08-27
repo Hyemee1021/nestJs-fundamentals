@@ -7,7 +7,6 @@ const Home = () => {
     <main>
       <h1>Hello, Next.js</h1>
       <ProductCard />
-      <UserPage />
     </main>
   );
 };
